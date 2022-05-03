@@ -22,12 +22,10 @@ foodInput.addEventListener('submit', (e) => {
         measurement: foodData.get('measurement'),
     };
     totalIngredients.push(ingredients);  
-    console.log(totalIngredients);
 });
 // Remove Last Ingredient Button
 removeLastItem.addEventListener('click', () => {
     totalIngredients.pop();
-    console.log(totalIngredients);
 });
 //
 
