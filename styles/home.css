@@ -1,6 +1,6 @@
 /* add home page styles here */
 
-.food-input {
+#food-input {
     background-color: lightblue;
     display: flex;
     flex-direction: column;
