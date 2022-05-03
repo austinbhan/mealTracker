@@ -28,11 +28,11 @@
         <form id="food-input">
             <div class="ingredient">
                 <label>Ingredient</label>
-                <input id="ingredient-input">
+                <input name="ingredient-input" id="ingredient-input">
             </div>
             <div class="quantity">
                 <label>Quantity</label>
-                <input type="number" id="quantity">
+                <input type="number" name="quantity" id="quantity">
             </div>
             <div class="measurement">
                 <label>Measurement</label>
@@ -46,10 +46,11 @@
             </div>
             <div id="buttons">
                 <button id="add-ingredient">Add Ingredient</button>
-                <button id="remove-last-item">Remove Last Item</button>
+                
             </div>
             <ul id="listed-ingredients">Your List of Ingredients Goes Here</ul>
         </form>
+            <button id="remove-last-item">Remove Last Item</button>
     </main>
     <footer>
         <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
