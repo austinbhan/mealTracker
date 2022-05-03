@@ -22,19 +22,19 @@
         <section id="title-page">
             <img class="main-logo" src="./assets/alchemy-logo.png" />
             <h2>
-            Welcome to Alchemy Bootstrap!
+            Foody Tracky Dacky Yacky
             </h2>
         </section>
-        <form id="ingredients">
+        <form class="food-input">
             <div class="ingredient">
                 <label>Ingredient</label>
                 <input id="ingredient-input">
             </div>
             <div class="quantity">
                 <label>Quantity</label>
-                <input type="number">
+                <input type="number" id="quantity">
             </div>
-            <div class="measurement" type=>
+            <div class="measurement">
                 <label>Measurement</label>
                 <select name="measurement" id="serving">
                     <option value="cups">Cups</option>
@@ -48,7 +48,7 @@
                 <button id="add-ingredient">Add Ingredient</button>
                 <button id="remove-last-item">Remove Last Item</button>
             </div>
-        
+            <ul id="listed-ingredients">List of Ingredients Goes Here</ul>
         </form>
     </main>
     <footer>

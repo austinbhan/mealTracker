@@ -1,8 +1,8 @@
 /* add home page styles here */
 
-#ingredients {
+.food-input {
     background-color: lightblue;
     display: flex;
     flex-direction: column;
-    -ms-flex-align: star;
 }
+
