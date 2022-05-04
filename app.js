@@ -1,6 +1,8 @@
 // import functions and grab DOM elements
 const foodInput = document.getElementById('food-input');
 const removeLastItem = document.getElementById('remove-last-item');
+const saveMeal = document.getElementById('save-meal');
+
 
 const listedIngredients = document.getElementById('listed-ingredients');
 
@@ -8,6 +10,7 @@ const listedIngredients = document.getElementById('listed-ingredients');
 let totalIngredients = [];
 let meals = [];
 
+// Add Ingredient Form
 foodInput.addEventListener('submit', (e) => {
     e.preventDefault();
     const foodData = new FormData(foodInput);
@@ -20,12 +23,13 @@ foodInput.addEventListener('submit', (e) => {
     appendIngredients();
 });
 
-function appendIngredient(item) {
-    const li = document.createElement('li');
-    li.textContent = `${item.quantity} ${item.measurement} of ${item.ingredient}`;
-    return li;
-}
+// Remove Last Item Button
+removeLastItem.addEventListener('click', () => {
+    totalIngredients.pop();
+    appendIngredients();
+});
 
+// List of Ingredients Form
 function appendIngredients() {
     listedIngredients.textContent = '';
     for (let item of totalIngredients) {
@@ -34,9 +38,18 @@ function appendIngredients() {
     }
 }
 
-removeLastItem.addEventListener('click', () => {
-    totalIngredients.pop();
-    appendIngredients();
+// Ingredient Text Content Form
+function appendIngredient(item) {
+    const li = document.createElement('li');
+    li.textContent = `${item.quantity} ${item.measurement} of ${item.ingredient}`;
+    return li;
+}
+
+// List of Meals Form
+saveMeal.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const mealData = new FormData(saveMeal);
+  let mealName = mealData.get('meal-name'); //??
 });
 //
 

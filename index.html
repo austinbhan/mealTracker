@@ -26,7 +26,8 @@
             </h2>
         </section>
         
-        <div class="ingredients-grid">
+        <!--Begin Ingredients Section-->  
+        <div class="ingredients-container">
             <form id="food-input">
                 <h3>Ingredients</h3>
                 <div class="ingredient">
@@ -52,18 +53,26 @@
         <button id="remove-last-item">Remove Last Item</button>
         
         <ul id="listed-ingredients">Your List of Ingredients Goes Here</ul>    
-    </div> <!--End Ingredients Section-->  
+    </div> 
 
     <!--Begin Save Meal Window-->
-    <div class="save-meal-grid">
+    <div class="save-meal-container">
         <form id="save-meal">
             <h3>Save Meal</h3>
             <label>Save Meals</label>
             <input name="meal-name" id="meal-name">
+            <button family="meal-button" id="meal-button">Save Meal</button>
         </form>
     </div>   
-    
-    </main>
+
+    <!--Begin Meal History Window-->
+    <div class="meal-history-container">
+        <h3>Meals</h3>
+        <ul family="meal-history" id="meal-history"></ul></ul>
+
+    </div>
+
+    </main> <!--End Main Section-->
     <footer>
         <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
     </footer>
