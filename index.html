@@ -25,29 +25,44 @@
             Foody Tracky Dacky Yacky
             </h2>
         </section>
-        <form id="food-input">
-            <div class="ingredient">
-                <label>Ingredient</label>
-                <input name="ingredient-input" id="ingredient-input">
-            </div>
-            <div class="quantity">
-                <label>Quantity</label>
-                <input type="number" name="quantity" id="quantity">
-            </div>
-            <div class="measurement">
-                <label>Measurement</label>
-                <select name="measurement" id="serving">
-                    <option value="cups">Cups</option>
-                    <option value="grams">Grams</option>
-                    <option value="ml">Milliliter</option>
-                    <option value="tsp">Teaspoons</option>
-                    <option value="tbsn">Tablespoons</option>
-                </select>
-            </div>
-            <button id="add-ingredient">Add Ingredient</button>
-            <ul id="listed-ingredients">Your List of Ingredients Goes Here</ul>
+        
+        <div class="ingredients-grid">
+            <form id="food-input">
+                <h3>Ingredients</h3>
+                <div class="ingredient">
+                    <label>Ingredient</label>
+                    <input name="ingredient-input" id="ingredient-input">
+                </div>
+                <div class="quantity">
+                    <label>Quantity</label>
+                    <input type="number" name="quantity" id="quantity">
+                </div>
+                <div class="measurement">
+                    <label>Measurement</label>
+                    <select name="measurement" id="serving">
+                        <option value="cups">Cups</option>
+                        <option value="grams">Grams</option>
+                        <option value="ml">Milliliter</option>
+                        <option value="tsp">Teaspoons</option>
+                        <option value="tbsn">Tablespoons</option>
+                    </select>
+                </div>
+                <button id="add-ingredient">Add Ingredient</button>
+            </form>    
+        <button id="remove-last-item">Remove Last Item</button>
+        
+        <ul id="listed-ingredients">Your List of Ingredients Goes Here</ul>    
+    </div> <!--End Ingredients Section-->  
+
+    <!--Begin Save Meal Window-->
+    <div class="save-meal-grid">
+        <form id="save-meal">
+            <h3>Save Meal</h3>
+            <label>Save Meals</label>
+            <input name="meal-name" id="meal-name">
         </form>
-            <button id="remove-last-item">Remove Last Item</button>
+    </div>   
+    
     </main>
     <footer>
         <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>

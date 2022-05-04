@@ -1,2 +1,10 @@
 /* add home page styles here */
 
+.ingredients-grid {
+    background-color: lightblue;
+    
+}
+
+.save-meal-grid {
+    background-color: lightgrey;
+}
