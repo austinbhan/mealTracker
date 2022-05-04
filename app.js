@@ -1,7 +1,9 @@
 // import functions and grab DOM elements
 const foodInput = document.getElementById('food-input');
 const removeLastItem = document.getElementById('remove-last-item');
-const saveMeal = document.getElementById('save-meal');
+const mealHistory = document.getElementById('meal-history');
+const saveMealButton = document.getElementById('meal-button');
+const mealName = document.getElementById('meal-name');
 
 
 const listedIngredients = document.getElementById('listed-ingredients');
@@ -29,7 +31,7 @@ removeLastItem.addEventListener('click', () => {
     appendIngredients();
 });
 
-// List of Ingredients Form
+// List of Ingredients After addIngredient Button
 function appendIngredients() {
     listedIngredients.textContent = '';
     for (let item of totalIngredients) {
@@ -46,12 +48,31 @@ function appendIngredient(item) {
 }
 
 // List of Meals Form
-saveMeal.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const mealData = new FormData(saveMeal);
-  let mealName = mealData.get('meal-name'); //??
+saveMealButton.addEventListener('click', () => {
+    const savedMeal = mealName.value; 
+    const count = totalIngredients.length;
+    meals.push({ savedMeal, count });
+    renderMeals();
+    console.log(savedMeal);
+    console.log(count);
 });
-//
+
+// Create Meal Text Content Form
+function mealList(item) {
+    const li = document.createElement('li');
+    li.textContent = `${item.savedMeal}: ${item.count}`;
+    return li;
+}
+
+// Render JS into HTML
+function renderMeals() {
+  mealHistory.textContent = '';
+    for (let meal of meals) {
+        const li = mealList(meal);
+        mealHistory.append(li);
+    }
+}
+
 
   // get user input
   // use user input to update state 
