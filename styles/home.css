@@ -1,1 +1,14 @@
 /* add home page styles here */
+
+.ingredients-container {
+    background-color: lightblue;
+    
+}
+
+.save-meal-container {
+    background-color: lightgrey;
+}
+
+.meal-history-container {
+    background-color: lightgreen;
+}
