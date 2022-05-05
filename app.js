@@ -53,20 +53,19 @@ saveMealButton.addEventListener('click', () => {
     const count = totalIngredients.length;
     meals.push({ savedMeal, count });
     renderMeals();
-    console.log(savedMeal);
-    console.log(count);
+    
 });
 
 // Create Meal Text Content Form
 function mealList(item) {
     const li = document.createElement('li');
-    li.textContent = `${item.savedMeal}: ${item.count}`;
+    li.textContent = `${item.savedMeal}: ${item.count} ingredients`;
     return li;
 }
 
 // Render JS into HTML
 function renderMeals() {
-  mealHistory.textContent = '';
+    mealHistory.textContent = '';
     for (let meal of meals) {
         const li = mealList(meal);
         mealHistory.append(li);
